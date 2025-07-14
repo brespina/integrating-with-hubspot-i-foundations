@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const axios = require('axios');
 
@@ -7,7 +8,8 @@ app.set('view engine', 'pug');
 
 app.use(express.static(__dirname + '/public'));
 
-const PRIVATE_APP_ACCESS = "";
+const PRIVATE_APP_ACCESS = process.env.PRIVATE_APP_ACCESS;
+console.log(PRIVATE_APP_ACCESS)
 
 app.get('/contacts', async (req, res) => {
 
