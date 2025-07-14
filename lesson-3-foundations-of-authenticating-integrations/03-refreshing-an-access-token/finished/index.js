@@ -16,7 +16,7 @@ const CLIENT_SECRET = process.env.CLIENT_SECRET;
 
 const REDIRECT_URI = `http://localhost:3000/oauth-callback`;
 
-const authUrl = ``;
+const authUrl = `https://app-na2.hubspot.com/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=crm.objects.contacts.write%20oauth%20crm.objects.contacts.read`;
 
 const refreshTokenStore = {};
 const accessTokenCache = new NodeCache({ deleteOnExpire: true});
